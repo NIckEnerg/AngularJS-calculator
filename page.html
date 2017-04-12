@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+
+<html ng-app ="calculator">
+
+<head>
+	<meta charset="uts-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div id="background">
+		<div class="calculatorBody" ng-controller="calculatorController" id = "mainCalculator">
+			
+			<div id="lane" ng-bind="state.operationLane"></div>
+			<div id="result" ng-bind="state.showNumber"> </div>
+				
+			<div class="main">
+				<div class="rows">
+					<button id="backspace" ng-click="del()" class="firstChild">del</button>
+					<button class="M" ng-click="MSave()">MS</button>
+					<button ng-if="state.M !== null" class="M" ng-click="MClear()">MC</button>
+					<button ng-if="state.M !== null" class="M" ng-click="MInsert()">MI</button>
+					
+				</div>
+
+				<div class="rows">
+					<button id="clear" ng-click="clear()" class="firstChild clear">C</button>
+					<button id="clearE" ng-click="clearE()" class="clear">CE</button>
+					<button id="pow" ng-click="proceed('^', operations.pow)">POW</button>
+					<button id="divide" ng-click="proceed('/', operations.divide)">&divide;</button>
+				</div>
+
+				<div class="rows">
+					<button class="number firstChild" ng-click="inputNumber(7)">7</button>	
+					<button class="number" ng-click="inputNumber(8)">8</button>	
+					<button class="number" ng-click="inputNumber(9)">9</button>	
+					<button id="multiply" ng-click="proceed('*', operations.multiply)">*</button>
+				</div>
+
+				<div class="rows">
+					<button class="number firstChild" ng-click="inputNumber(4)">4</button>	
+					<button class="number" ng-click="inputNumber(5)">5</button>	
+					<button class="number" ng-click="inputNumber(6)">6</button>	
+					<button id="minus" ng-click="proceed('-', operations.minus)">-</button>
+				</div>
+				
+				<div class="rows">
+					<button class="number firstChild" ng-click="inputNumber(1)">1</button>	
+					<button class="number" ng-click="inputNumber(2)">2</button>	
+					<button class="number" ng-click="inputNumber(3)">3</button>	
+					<button id="plus" ng-click="proceed('+', operations.plus)">+</button>
+				</div>
+
+				<div class="rows">
+					<button id="sign" ng-click="changeSign()" class="firstChild">&plusmn;</button>
+					<button class="number" ng-click="inputNumber(0)">0</button>
+					<button id="dot" ng-click="dot()">.</button>	
+					<button id="equal" ng-click="equal()">=</button>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<script src="js/lib/angular.min.js"></script>
+	<script  src="js/handlers.js"></script>
+	<script  src="js/controllers/calculator.js"></script>
+</body>
+
+</html>

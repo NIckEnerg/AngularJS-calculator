@@ -1,0 +1,93 @@
+body {
+  background:#ddd;
+}
+#background {
+    width:300px;
+    height:420px;
+    background:#777;
+    margin:100px auto;   
+}
+#lane {
+    display:block;
+    font-family: sans-serif;
+    width:250px;
+    height:30px;
+    margin:10px auto;
+    text-align: right;
+    border:0;
+    background:#3b3535;
+    color:#fff;
+    padding-top:0px;
+    font-size:10px;
+    margin-left: 25px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 2px;
+    position: relative;
+    top:10px;
+}
+#result {
+    display:block;
+    font-family: sans-serif;
+    width:250px;
+    height:24px;
+    margin:10px auto;
+    text-align: right;
+    border:0;
+    background:#3b3535;
+    color:#fff;
+    padding-top:0px;
+    font-size:19px;
+    margin-left: 25px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+    top:1px;
+}
+
+.main{
+	display:block;
+	position: relative;
+	margin:auto;
+}
+.rows{
+	position: relative;
+	margin-top: 7px
+}
+
+button {
+    width:52px;
+    height:50px;
+    margin-left: 10px;
+    border-radius:4px;
+	position: relative;
+	text-align: center;
+	vertical-align: -webkit-baseline-middle;
+	font-size: 30px;
+}
+
+.firstChild{
+	margin-left: 25px;
+}
+
+
+.number{
+	font-size: 30px;
+}
+
+.M{
+	font-size: 20px;
+}
+
+#backspace{
+	font-size: 20px;
+	font-weight: bold;
+}
+.clear{
+	font-size: 20px;
+}
+#pow{
+	font-size: 15px;
+	font-weight: bold;
+}
